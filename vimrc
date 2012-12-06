@@ -34,11 +34,10 @@ set nobackup        " no backup files
 " set colorscheme
 set t_Co=256
 if &t_Co >= 256 || has("gui_running")
-    colorscheme mustang
+    colorscheme mustang 
 endif
-
 if &t_Co > 2 || has("gui_running")
-    syntax on
+    syntax on 
 endif
 
 " avoid flashing and beeping
@@ -56,3 +55,6 @@ set pastetoggle=<F4>
 
 " key binding for :
 nnoremap º :
+
+" clear highlighting
+nmap <silent> <leader>/ :nohlsearch<CR>
