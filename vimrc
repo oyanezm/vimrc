@@ -58,3 +58,7 @@ nnoremap º :
 
 " clear highlighting
 nmap <silent> <leader>/ :nohlsearch<CR>
+
+" sudo in case forgotten
+cmap w!! w !sudo tee % >/dev/null
+
