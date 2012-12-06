@@ -40,3 +40,11 @@ endif
 if &t_Co > 2 || has("gui_running")
     syntax on
 endif
+
+" avoid flashing and beeping
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
+" highlight withespaces
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
