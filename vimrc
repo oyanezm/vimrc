@@ -48,3 +48,5 @@ autocmd GUIEnter * set visualbell t_vb=
 " highlight withespaces
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
+" disable tab display on django template,php,html,php and xml
+autocmd filetype djangohtml,php,html,xml set listchars-=tab:>.
