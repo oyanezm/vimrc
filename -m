@@ -53,6 +53,3 @@ autocmd filetype djangohtml,php,html,xml set listchars-=tab:>.
 
 " paste mode
 set pastetoggle=<F4>
-
-" key binding for :
-nnoremap º :
