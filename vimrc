@@ -62,3 +62,5 @@ nmap <silent> <leader>/ :nohlsearch<CR>
 " sudo in case forgotten
 cmap w!! w !sudo tee % >/dev/null
 
+" CTRL-P file finder plugin
+set runtimepath^=~/.vim/bundle/ctrlp.vim
