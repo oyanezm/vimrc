@@ -3,7 +3,7 @@ filetype off            " force reloading *after* pathogen loaded
 call pathogen#infect()  " load pathogen for isolated plugins
 filetype plugin indent on " load indent filetype
 
-:let mapleader = "," " comma for custom key
+let mapleader = "," " comma for custom key
 
 " <leader>h and <leader>v for split/vsplit
 nmap <silent> <leader>h  :split<cr>
@@ -34,7 +34,14 @@ set nobackup        " no backup files
 " set colorscheme
 set t_Co=256
 if &t_Co >= 256 || has("gui_running")
-    colorscheme mustang 
+"    colorscheme mustang
+set background=dark
+let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
+
+colorscheme solarized
 endif
 if &t_Co > 2 || has("gui_running")
     syntax on 
@@ -64,3 +71,7 @@ cmap w!! w !sudo tee % >/dev/null
 
 " CTRL-P file finder plugin
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+" tagbar key binding
+nnoremap <F3> :TagbarToggle<CR>
+let g:tagbar_usearrows = 1
