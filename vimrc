@@ -13,7 +13,11 @@ set hidden " open new files without haveng to save or undo
 set nowrap " no wrappin on line that exceeds width on screen
 set backspace=indent,eol,start "allow backspacing over everything in insert mode
 set number " number per line
-set showmatch
+set showmatch "at paranthesis, brackets
+
+"auto indent config
+set smartindent
+set expandtab
 set autoindent      " copy indent from previous line
 set tabstop=4       " a default tab is four spaces
 set shiftwidth=4    " number of spaces to use for autoindenting
@@ -21,7 +25,7 @@ set shiftround      " tab to multiple of shoftwidth, rather than just add spaces
 set ignorecase      " ignore case when arching
 set smartcase       " ignore case if search pattern is all lowercase,
                     " case-sensitive otherwise.
-set smarttab        " allow <bs> to delet complete tab
+set smarttab        " allow <bs> to delete complete tab
 set hlsearch        " highlight search terms
 set incsearch       " show search matches as you type
 set undolevels=1000 " use many levels of undo
@@ -35,16 +39,15 @@ set nobackup        " no backup files
 set t_Co=256
 if &t_Co >= 256 || has("gui_running")
 "    colorscheme mustang
-set background=dark
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-
-colorscheme solarized
+    set background=dark
+    let g:solarized_termtrans=1
+    let g:solarized_termcolors=256
+    let g:solarized_contrast="high"
+    let g:solarized_visibility="high"
+    colorscheme solarized
 endif
 if &t_Co > 2 || has("gui_running")
-    syntax on 
+    syntax on
 endif
 
 " avoid flashing and beeping
@@ -75,3 +78,9 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 " tagbar key binding
 nnoremap <F3> :TagbarToggle<CR>
 let g:tagbar_usearrows = 1
+
+" closetag plugin fro html and xml
+autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/html-closetag/plugin/closetag.vim
+" 2 space indent on html and c files "
+autocmd FileType html,htmldjango,c,cpp,php :setlocal sw=2 ts=2 sts=2
