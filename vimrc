@@ -76,7 +76,7 @@ cmap w!! w !sudo tee % >/dev/null
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " tagbar key binding
-nnoremap <F3> :TagbarToggle<CR>
+nnoremap <leader>t :TagbarToggle<CR>
 let g:tagbar_usearrows = 1
 
 " closetag plugin fro html and xml
@@ -84,3 +84,11 @@ autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/html-closetag/plugin/closetag.vim
 " 2 space indent on html and c files "
 autocmd FileType html,htmldjango,c,cpp,php :setlocal sw=2 ts=2 sts=2
+
+" Don't run messdetector on save (default = 1)
+let g:phpqa_messdetector_autorun = 0
+
+" Don't run codesniffer on save (default = 1)
+let g:phpqa_codesniffer_autorun = 0
+" Show code coverage on load (default = 0)
+let g:phpqa_codecoverage_autorun = 1
