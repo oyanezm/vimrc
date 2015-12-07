@@ -7,4 +7,4 @@ Plugins
 - git clone at home
 - rename folder to .vim
 - create /home/user/.vimrc containing
-- source fullpath/to/.vimrc"
+- source /home/user/.vim/vimrc"
