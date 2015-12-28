@@ -84,6 +84,11 @@ autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/html-closetag/plugin/closetag.vim
 
 " 2 space indent on html and c files "
+
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+
 autocmd FileType html,htmldjango,css,less,js,c,cpp,php :setlocal sw=2 ts=2 sts=2
 
 " Don't run messdetector on save (default = 1)
