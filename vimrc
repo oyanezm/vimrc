@@ -82,8 +82,9 @@ let g:tagbar_usearrows = 1
 " closetag plugin for html and xml
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/html-closetag/plugin/closetag.vim
+
 " 2 space indent on html and c files "
-autocmd FileType html,htmldjango,css,c,cpp,php :setlocal sw=2 ts=2 sts=2
+autocmd FileType html,htmldjango,css,less,js,c,cpp,php :setlocal sw=2 ts=2 sts=2
 
 " Don't run messdetector on save (default = 1)
 let g:phpqa_messdetector_autorun = 0
