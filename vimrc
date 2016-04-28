@@ -24,7 +24,7 @@ set shiftwidth=4    " number of spaces to use for autoindenting
 set shiftround      " tab to multiple of shoftwidth, rather than just add spaces.
 set ignorecase      " ignore case when arching
 set smartcase       " ignore case if search pattern is all lowercase,
-                    " case-sensitive otherwise.
+                                        " case-sensitive otherwise.
 set smarttab        " allow <bs> to delete complete tab
 set hlsearch        " highlight search terms
 set incsearch       " show search matches as you type
@@ -38,7 +38,7 @@ set nobackup        " no backup files
 " set colorscheme
 set t_Co=256
 if &t_Co >= 256 || has("gui_running")
-    colorscheme mustang
+        colorscheme mustang
 "    set background=dark
 "    let g:solarized_termtrans=1
 "    let g:solarized_termcolors=256
@@ -47,7 +47,7 @@ if &t_Co >= 256 || has("gui_running")
 "    colorscheme solarized
 endif
 if &t_Co > 2 || has("gui_running")
-    syntax on
+        syntax on
 endif
 
 " avoid flashing and beeping
@@ -87,8 +87,7 @@ autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bu
 
 set shiftwidth=2
 set softtabstop=2
-set tabstop=2
-
+set tabstop=4
 autocmd FileType html,htmldjango,css,less,js,c,cpp,php :setlocal sw=2 ts=2 sts=2
 
 " Don't run messdetector on save (default = 1)
