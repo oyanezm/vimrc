@@ -111,3 +111,5 @@ nmap <leader>ga :Gwrite<cr>
 nmap <leader>gl :Glog<cr>
 nmap <leader>gd :Gdiff<cr>
 
+" Ignore node_modules
+let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|git\|tmp'
