@@ -60,6 +60,9 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 " disable tab display on django template,php,html,php and xml
 autocmd filetype djangohtml,php,html,xml set listchars-=tab:>.
 
+" python filetype
+au FileType python setl sw=2 sts=2 et
+
 " paste mode
 set pastetoggle=<F4>
 
@@ -112,4 +115,4 @@ nmap <leader>gl :Glog<cr>
 nmap <leader>gd :Gdiff<cr>
 
 " Ignore node_modules
-let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|git\|tmp'
+let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|git\|tmp\|platform\|plugins'
