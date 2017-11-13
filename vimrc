@@ -116,3 +116,6 @@ nmap <leader>gd :Gdiff<cr>
 
 " Ignore node_modules
 let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|git\|tmp\|platform\|plugins'
+
+highlight ColorColumn ctermbg=gray
+set colorcolumn=80
