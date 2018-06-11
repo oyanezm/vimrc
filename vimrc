@@ -125,6 +125,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+" First install dependencies: npm install -g typescript && npm install -g tslint
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -132,3 +133,6 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_check_on_w = 1
 let g:syntastic_typescript_checkers = ['tslint']
 let g:syntastic_typescript_tslint_args = "--config ~/src/santander/tslint.json"
+
+" disable html checker
+let g:syntastic_html_checkers=['']
