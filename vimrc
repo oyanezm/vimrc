@@ -136,3 +136,12 @@ let g:syntastic_typescript_tslint_args = "--config ~/src/santander/tslint.json"
 
 " disable html checker
 let g:syntastic_html_checkers=['']
+
+" force python 3 avoid pyflakes error
+let g:pymode_python = 'python3'
+
+" overwrite tab spacing on python
+aug python
+  " ftype/python.vim overwrites this
+  au FileType python set sw=4
+aug end
